@@ -1,0 +1,30 @@
+<div class="col-md-11 col-md-offset-1">
+  <div class="page-header">
+    <h3 id ="post{{post.id}}">{{post.title}}<small><br>{{post.subtitle}}</small></h3>
+  </div>
+  <p>{{post.content}}</p>
+  <div class="row">
+    <div class="col-md-11">
+      <br>
+      <div class="form-inline">
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" class="form-control" ng-model="messageContent" placeholder="Add message to the post" aria-describedby="basic-addon1">
+            <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
+          </div>
+        </div>
+        <button class="btn btn-success" ng-click="addMessage();">Send</button>
+      </div>
+    </div>
+  </div>
+  <div class="row" ng-repeat="msg in post.messages">
+    <div class="col-md-11">
+      <p>
+        <small>
+          {{msg.message}}
+          <small> -- Added by ({{msg.author}})</small>
+        </small>
+      </p>
+    </div>
+  </div>
+</div>

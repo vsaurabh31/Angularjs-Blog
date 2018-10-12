@@ -1,0 +1,45 @@
+<div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Basic Info</div>
+    <div class="panel-body">
+      <form name="introForm" ng-submit="saveBasicForm()">
+        <label for="name">Name</label>
+        <input type="text" ng-model="basicInfoEdit.name" class="form-control" id="name" placeholder="Enter your name here" required>
+
+        <label for="introduction">Introduction</label>
+        <textarea class="form-control" ng-model="basicInfoEdit.introduction" id="introduction" placeholder="Introduce yourself in here dude"></textarea>
+
+        <div class="pull-right">
+          <br>
+          <button type="submit" class="btn btn-primary">Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Social Data</div>
+    <div class="panel-body">
+      <form name="socialForm" ng-submit="saveSocialForm()">
+        <label for="works">Works at</label>
+        <input type="text" ng-model="socialEdit.works" class="form-control" id="works" placeholder="Where do you work?">
+
+        <label for="lives">Lives in</label>
+        <input type="text" ng-model="socialEdit.lives" class="form-control" id="lives" placeholder="Where do you live?">
+
+        <label for="birthday">Birthday</label>
+        <input type="date" ng-model="socialEdit.birthday" class="form-control" id="birthday" placeholder="Where do you live?">
+
+        <label for="from">From</label>
+        <input type="text" ng-model="socialEdit.from" class="form-control" id="from" placeholder="Originally from where?">
+
+        <div class="pull-right">
+          <br>
+          <button type="submit" class="btn btn-primary">Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

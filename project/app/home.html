@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default" ng-controller="homeController">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" ui-sref="view">
+        Blogular
+      </a>
+      <ul class="nav navbar-nav">
+        <li ng-class="{'active': currentMenu === 'view'}"><a ui-sref="view" ng-click="currentMenu = 'view'">View</a></li>
+        <li ng-class="{'active': currentMenu === 'profile'}"><a ui-sref="profile" ng-click="currentMenu = 'profile'">My Profile</a></li>
+        <li ng-class="{'active': currentMenu === 'entries'}"><a ui-sref="entries" ng-click="currentMenu = 'entries'">Blog Entries</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="background-color: #FFFFFF; min-height:700px;">
+  <div class="col-md-12"><br></div>
+  <div class="col-md-12" ui-view></div>
+</div>
